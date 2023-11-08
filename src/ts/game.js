@@ -37,17 +37,18 @@ class Game {
         // if (this.word) console.log(`Word is "${this.word}" (cheater 👀)`)
     }
     getColor(color, keyboard = false) {
-        switch (color) {
-            case "correct":
-                return "#43B343";
-            case "empty":
-                return keyboard ? "dimgrey" : "#D3D3D3";
-            case "semicorrect":
-                return "#FFC300";
-            case "none":
-                return "";
-        }
+    switch (color) {
+        case "correct":
+            return "#00FF00"; // Change the color to plain green
+        case "empty":
+            return keyboard ? "dimgrey" : "#D3D3D3";
+        case "semicorrect":
+            return "#FFC300";
+        case "none":
+            return "";
     }
+}
+
     get coloredBoxes() {
         return this.boxes.map((row) => row.map((color) => this.getColor(color)));
     }
